@@ -1,5 +1,9 @@
 package edu.marcus.designpatterns.behavioral.command;
 
+/**
+ * Chef is the class how really know how to execute
+ * the method defined by the Command interface
+ */
 public class Chef implements Command {
 	
 	private Food food;

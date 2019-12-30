@@ -23,21 +23,21 @@ ByteArrayOutputStream outContent;
 
 	@Test
 	public void brazilianChefTest() {
-		Chef chef1 = ChefFactory.getChef(Cuisine.BRAZILIAN, new Food("Feijoada"));
+		Chef chef1 = Cuisine.BRAZILIAN.create(new Food("Feijoada"));
 		chef1.execute();
 		assertEquals("Brazilian chef cooking Feijoada\n", outContent.toString());
 	}
 
 	@Test
 	public void chineseChefTest() {
-		Chef chef2 = ChefFactory.getChef(Cuisine.CHINESE, new Food("Kung Pao Chicken"));
+		Chef chef2 = Cuisine.CHINESE.create(new Food("Kung Pao Chicken"));
 		chef2.execute();
 		assertEquals("Chinese chef cooking Kung Pao Chicken\n", outContent.toString());
 	}
 
 	@Test
 	public void mexicanChefTest() {
-		Chef chef3 = ChefFactory.getChef(Cuisine.MEXICAN, new Food("Burrito"));
+		Chef chef3 = Cuisine.MEXICAN.create(new Food("Burrito"));
 		chef3.execute();
 		assertEquals("Mexican chef cooking Burrito\n", outContent.toString());
 	}
